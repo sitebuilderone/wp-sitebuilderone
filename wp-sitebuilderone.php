@@ -35,5 +35,27 @@ if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
 
+// checks to see if acf-json exists
+$acf_json_dir = plugin_dir_path(__FILE__) . 'acf-json';
+if ( !file_exists($acf_json_dir) ) {
+    mkdir($acf_json_dir, 0755, true);
+}
+
+// Save ACF JSON to the plugin's `acf-json` directory
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+function my_acf_json_save_point($path) {
+    // Save JSON to the plugin's `acf-json` directory
+    $path = plugin_dir_path(__FILE__) . 'acf-json';
+    return $path;
+}
+
+// Load ACF JSON from the plugin's `acf-json` directory
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+function my_acf_json_load_point($paths) {
+    // Append the plugin's `acf-json` directory
+    $paths[] = plugin_dir_path(__FILE__) . 'acf-json';
+    return $paths;
+}
+
 include_once plugin_dir_path(__FILE__) . 'includes/shortcodes-social.php';
 include_once plugin_dir_path(__FILE__) . 'includes/acf-conditional-shortcodes.php';
