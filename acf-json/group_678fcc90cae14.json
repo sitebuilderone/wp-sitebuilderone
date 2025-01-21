@@ -1,0 +1,87 @@
+{
+    "key": "group_678fcc90cae14",
+    "title": "Contacts",
+    "fields": [
+        {
+            "key": "field_678fcc9046d51",
+            "label": "Primary contact",
+            "name": "one_primary_contact",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Who is the primary contact for the website or business",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_678fccff3633b",
+            "label": "Contact email",
+            "name": "one_primary_contact_email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "Not listed on website",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_678fcd2bfaf39",
+            "label": "Phone number",
+            "name": "one_primary_phone_number",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "business-information"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Primary contacts for business or website",
+    "show_in_rest": 0,
+    "modified": 1737478412
+}

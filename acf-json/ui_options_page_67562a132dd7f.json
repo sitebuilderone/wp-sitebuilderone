@@ -1,0 +1,26 @@
+{
+    "key": "ui_options_page_67562a132dd7f",
+    "title": "Business",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Business",
+    "menu_slug": "business-information",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "Business",
+    "position": 2,
+    "redirect": 0,
+    "description": "Information about local business",
+    "menu_icon": {
+        "type": "dashicons",
+        "value": "dashicons-building"
+    },
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 1,
+    "modified": 1737475865
+}

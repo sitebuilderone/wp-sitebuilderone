@@ -1,0 +1,63 @@
+{
+    "key": "group_678fc3630393e",
+    "title": "Support",
+    "fields": [
+        {
+            "key": "field_678fc363fd4f8",
+            "label": "Support email",
+            "name": "one_support_email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "Send support inquiries here",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_678fcef1334ab",
+            "label": "Project URL",
+            "name": "one_project_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "URL for project management system (i.e., BaseCamp, Wrike, other)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "support"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1737478486
+}

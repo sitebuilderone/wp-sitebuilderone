@@ -1,0 +1,148 @@
+{
+    "key": "group_67562eb88379f",
+    "title": "Physical Address",
+    "fields": [
+        {
+            "key": "field_67562eb87b498",
+            "label": "Street Address",
+            "name": "one_street_address",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "The physical street address, including number, street, and unit\/suite.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_67562f2bf78d3",
+            "label": "City",
+            "name": "one_city",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67562f49f78d4",
+            "label": "State",
+            "name": "one_state",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The state, province, or region.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67562f906c22c",
+            "label": "Postal Code",
+            "name": "one_postal_code",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The ZIP or postal code",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 20,
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67562fa76c22d",
+            "label": "Country",
+            "name": "one_country",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The country name or two-letter country code",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67563043e5e63",
+            "label": "Google Map URL",
+            "name": "one_google_map_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "URL to business <a href=\"https:\/\/www.google.com\/\">Google Map<\/a> listing",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "business-information"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1737478529
+}

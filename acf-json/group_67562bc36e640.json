@@ -1,0 +1,108 @@
+{
+    "key": "group_67562bc36e640",
+    "title": "Business Information",
+    "fields": [
+        {
+            "key": "field_67562bc3f82e3",
+            "label": "Business Name",
+            "name": "one_business_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Official business name",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67562d9f14866",
+            "label": "Phone",
+            "name": "one_business_phone",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Format: 555-555-1234",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 20,
+            "allow_in_bindings": 1,
+            "placeholder": "555-555-1234",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67562e0e14867",
+            "label": "Email",
+            "name": "one_business_email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "Main email address for business",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_678fc5a66800a",
+            "label": "Fax",
+            "name": "one_business-fax",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "business-information"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1737478363
+}

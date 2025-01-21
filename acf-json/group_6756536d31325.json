@@ -1,0 +1,140 @@
+{
+    "key": "group_6756536d31325",
+    "title": "Branding & SEO",
+    "fields": [
+        {
+            "key": "field_6756544138cfe",
+            "label": "Logo",
+            "name": "one_business_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Business logo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_6756536d78f9e",
+            "label": "Business Description",
+            "name": "one_business_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "A short paragraph describing the business. 250 characters or less",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_67565411604e6",
+            "label": "Keywords",
+            "name": "one_business_keywords",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Keywords related to business activities",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_678fc54ad0633",
+            "label": "Banner Image",
+            "name": "one_banner_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Home page masthead logo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_678fc8e92270e",
+            "label": "Tagline",
+            "name": "one_business_tagline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "A short, catchy tagline for the business",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "branding"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1737478323
+}
