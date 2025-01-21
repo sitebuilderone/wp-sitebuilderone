@@ -1,4 +1,4 @@
-# wp-sitebuilderone
+# wp-sitebuilderone (beta)
 
 All-in-One plugin for local business websites that are WordPress powered, using Bootstrap CSS via the [LiveCanvas](https://www.sitebuilderone.com/go/livecanvas) and Picostrap theme.
 
@@ -6,31 +6,44 @@ All-in-One plugin for local business websites that are WordPress powered, using 
 
 Using Advanced Custom Fields (ACF) options, areas of the website, such as header, footer and schema are pre-built using WordPress shortcodes.
 
-## Disclaimer: Beta
+### Local JSON
+Global options are served/saved via .JSON files via the 'acf-json' folder. This feature saves field groups, post types, taxonomies, and option pages as JSON files.
+
+More information about [ACF Local JSON](https://www.advancedcustomfields.com/resources/local-json/)
+
+## Beta
 
 ⚠️ **This plugin is currently in BETA.**  
-It is intended for development and testing purposes only and is **not recommended for production use**. Features and functionality may change, and there could be unresolved bugs or issues. Use at your own discretion.
+It is intended for development and testing purposes only and is **not recommended for production use**. 
+
+Features and functionality may change, and there could be unresolved bugs or issues. Use at your own discretion.
 
 ## Requirements
 
-1. [LiveCanvas](https://www.sitebuilderone.com/go/livecanvas) plugin
-2. [Picostrap](https://picostrap.com/) theme + blank child theme
-3. ACF Pro (Options)
-3. Plugin: [Git-updater](https://github.com/afragen/git-updater)
+### Plugins
+- [Advanced Custom Fields (ACF) Pro](https://www.advancedcustomfields.com/) - Custom fields & options
+- [LiveCanvas](https://www.sitebuilderone.com/go/livecanvas) - Bootstrap HTML page builder for WordPress
+- [Git-updater](https://github.com/afragen/git-updater) - for retrieving from GitHub repository
+- [Shortcodes Finder](https://wordpress.org/plugins/shortcodes-finder/) - to view all available shortcodes
+
+### Theme
+- [Picostrap](https://picostrap.com/) Bootstrap based theme + blank child theme
+
+### Optional
+
+- [LocalWP](https://localwp.com/) for local WordPress development & testing
+
 
 ## Setup
 
 1. Install [Git-updater](https://github.com/afragen/git-updater)
 2. Point to https://github.com/sitebuilderone/wp-sitebuilderone
+3. Use the 'main' branch.
 
 ![Git updater settings](https://raw.githubusercontent.com/sitebuilderone/wp-sitebuilderone/refs/heads/main/assets/images/gitupdater.png)
 
-## Testing 
 
-User [Shortcodes Finder](https://wordpress.org/plugins/shortcodes-finder/) plugin to view all shortcodes.
-
-
-# Social Media Shortcodes
+# Examples: Social Media Shortcodes
 
 
 Sample .html code for footer or wherever you want to place this

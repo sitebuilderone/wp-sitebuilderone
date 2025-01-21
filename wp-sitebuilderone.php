@@ -5,7 +5,7 @@
  * GitHub Plugin URI: https://github.com/sitebuilderone/wp-sitebuilderone
  * GitHub Branch: main
  * Description:       ACF, LiveCanvas compatible plugin for Local Business websites
- * Version:           0.0.7
+ * Version:           0.0.8
  * Author:            sitebuilderone.com
  * Author URI:        https://github.com/sitebuilderone
  * License:           GPL-2.0+
