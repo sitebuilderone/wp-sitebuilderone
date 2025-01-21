@@ -17,6 +17,10 @@ use in template:
 [social_github_link width="2em" fill="#333333"]
 
 */
+// If this file is called directly, abort.
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 function display_social_icon_shortcode($atts, $content = null, $shortcode_name = '') {
     // Define a mapping of shortcodes to ACF fields and SVG icons
