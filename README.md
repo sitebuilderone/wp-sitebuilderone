@@ -23,6 +23,10 @@ It is intended for development and testing purposes only and is **not recommende
 1. Install [Git-updater](https://github.com/afragen/git-updater)
 2. Point to https://github.com/sitebuilderone/wp-sitebuilderone
 
-![Git updater settings](images/gitupdater.png)
+![Git updater settings](assets/images/gitupdater.png)
 
+
+## Changelog
+
+For details on changes in this project, see the [Changelog](CHANGELOG.md).
 
