@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.10] - 2025-01-22
+### Added
+- [Editor Guide](editor-guide.md) boilerplate for content editors
+
 ## [0.0.9] - 2025-01-22
 ### Added
 - [Services](SERVICES.md) custom post type fields
