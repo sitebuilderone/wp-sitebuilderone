@@ -1,6 +1,39 @@
-# wp-sitebuilderone (beta)
+# Local business website (beta)
 
-All-in-One plugin for local business websites that are WordPress powered, using Bootstrap CSS via the [LiveCanvas](https://www.sitebuilderone.com/go/livecanvas) and Picostrap theme.
+All-in-One plugin for local business websites that are WordPress powered, using [Bootstrap](https://getbootstrap.com/) with the [LiveCanvas](https://www.sitebuilderone.com/go/livecanvas) plugin and [Picostrap](https://picostrap.com/) theme.
+
+This plugin standardizes the management of local business data & [Services](SERVICES.md) within WordPress by integrating with Advanced Custom Fields (ACF) and syncing JSON data to GitHub for version control.
+
+## Key Features
+
+- Business Information Management: Allows businesses to input and update essential details such as name, address, and contact information.
+- Custom Post Type for [Services](SERVICES.md): Each business can define its unique set of services within a dedicated custom post type.
+- SEO Optimization: Every service includes fields for SEO elements (title, meta descriptions, keywords) to enhance visibility.
+- Schema Integration: Automatically generates structured data (schema.org) for each service page to improve search engine discoverability and compliance with modern SEO practices.
+- Dynamic Schema Output: Ensures schema data is output on each service page for search engines to crawl effectively.
+- Social media properties database (Facebook, LinkedIn, etc)
+- Shortcodes for integration
+
+## Objectives
+- Streamline the process of adding and maintaining local business services with a standardized structure.
+- Enhance search engine rankings and visibility by leveraging schema and SEO elements.
+- Provide an extensible foundation for businesses to grow their digital presence using modern WordPress development practices.
+
+## Technical Highlights:
+- Multiple editors can add or edit business information in WordPress
+- Built using ACF for flexible and user-friendly field management.
+- JSON sync to GitHub ensures robust version control and team collaboration.
+- Compatible with WordPress themes utilizing the Bootstrap framework, ensuring responsive and accessible design.
+
+
+### Business information includes:
+
+- Business details: address, contact, location, etc.
+- Social media properties: Facebook, Instagram, LinkedIn, etc.
+- Integration codes: Google Analytics, Tag Manager, tracking scripts, etc.
+- Project support details: Project management tools, contact support.
+- [Services](SERVICES.md)
+
 
 ## How it works
 

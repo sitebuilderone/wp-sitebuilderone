@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.9] - 2025-01-22
+### Added
+- [Services](SERVICES.md) custom post type fields
+### Changed
+- Description update
+
 ## [0.0.8] - 2025-01-21
 ### Added
 - JSON files to acf-json folder
