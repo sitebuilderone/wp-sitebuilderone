@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.11] - 2025-01-22
+### Added
+- Dashboard widgets
+### Changed
+- Option locations
+- Services fields added
+
 ## [0.0.10] - 2025-01-22
 ### Added
 - [Editor Guide](editor-guide.md) boilerplate for content editors

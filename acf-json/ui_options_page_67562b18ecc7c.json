@@ -9,7 +9,7 @@
     "advanced_configuration": 1,
     "icon_url": "",
     "menu_title": "Integrations",
-    "position": "",
+    "position": 5,
     "redirect": false,
     "description": "Technical site settings and 3rd party integrations",
     "menu_icon": [],
@@ -20,5 +20,5 @@
     "post_id": "",
     "autoload": 0,
     "_parent": 257,
-    "modified": 1737476192
+    "modified": 1737608632
 }

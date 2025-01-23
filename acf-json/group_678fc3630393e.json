@@ -1,6 +1,6 @@
 {
     "key": "group_678fc3630393e",
-    "title": "Support",
+    "title": "Website Project Support",
     "fields": [
         {
             "key": "field_678fc363fd4f8",
@@ -54,10 +54,10 @@
     "position": "normal",
     "style": "default",
     "label_placement": "left",
-    "instruction_placement": "label",
+    "instruction_placement": "field",
     "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737478486
+    "modified": 1737608252
 }

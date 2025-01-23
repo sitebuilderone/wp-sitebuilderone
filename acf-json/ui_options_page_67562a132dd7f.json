@@ -9,7 +9,7 @@
     "advanced_configuration": 1,
     "icon_url": "",
     "menu_title": "Business",
-    "position": 2,
+    "position": 3,
     "redirect": 0,
     "description": "Information about local business",
     "menu_icon": {
@@ -22,5 +22,5 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 1,
-    "modified": 1737475865
+    "modified": 1737608663
 }

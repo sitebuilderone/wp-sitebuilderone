@@ -9,7 +9,7 @@
     "advanced_configuration": 1,
     "icon_url": "",
     "menu_title": "Support",
-    "position": "",
+    "position": 5,
     "redirect": false,
     "description": "Need help? Here are you website support options",
     "menu_icon": [],
@@ -20,5 +20,5 @@
     "post_id": "",
     "autoload": 0,
     "_parent": 257,
-    "modified": 1737477128
+    "modified": 1737608529
 }

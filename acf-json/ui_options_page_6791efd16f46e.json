@@ -1,17 +1,17 @@
 {
-    "key": "ui_options_page_67562ac1c51ec",
-    "title": "Marketing",
+    "key": "ui_options_page_6791efd16f46e",
+    "title": "Checklist",
     "active": true,
     "menu_order": 0,
-    "page_title": "Marketing",
-    "menu_slug": "marketing",
-    "parent_slug": "business-information",
+    "page_title": "Checklist",
+    "menu_slug": "website-checklist",
+    "parent_slug": "",
     "advanced_configuration": 1,
     "icon_url": "",
-    "menu_title": "Marketing",
-    "position": 1,
+    "menu_title": "",
+    "position": "",
     "redirect": false,
-    "description": "SEO related and website branding assets",
+    "description": "",
     "menu_icon": [],
     "update_button": "Update",
     "updated_message": "Options Updated",
@@ -20,5 +20,5 @@
     "post_id": "",
     "autoload": 1,
     "_parent": 257,
-    "modified": 1737608562
+    "modified": 1737618462
 }

@@ -9,7 +9,7 @@
     "advanced_configuration": 1,
     "icon_url": "",
     "menu_title": "Social Media",
-    "position": "",
+    "position": 3,
     "redirect": false,
     "description": "Social media properties",
     "menu_icon": [],
@@ -20,5 +20,5 @@
     "post_id": "",
     "autoload": 0,
     "_parent": 257,
-    "modified": 1737476498
+    "modified": 1737608581
 }

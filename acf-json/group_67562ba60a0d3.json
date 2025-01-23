@@ -322,10 +322,10 @@
     "position": "normal",
     "style": "default",
     "label_placement": "left",
-    "instruction_placement": "label",
+    "instruction_placement": "field",
     "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1737477811
+    "modified": 1737608283
 }
