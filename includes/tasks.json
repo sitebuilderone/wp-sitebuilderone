@@ -1,0 +1,20 @@
+[
+    {
+        "id": "task_001",
+        "task": "Review business details",
+        "instructions": "Update <a style='font-weight:bold;' href='admin.php?page=business-information'>business information</a>",
+        "completed": false
+    },
+    {
+        "id": "task_003",
+        "task": "Set Up Contact Form",
+        "instructions": "Create a contact form with name, email, and message fields.",
+        "completed": false
+    },
+    {
+        "id": "task_002",
+        "task": "Optimize Images",
+        "instructions": "Ensure all images are optimized for performance and include alt text.",
+        "completed": false
+    }    
+]

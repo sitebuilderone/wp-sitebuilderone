@@ -5,7 +5,7 @@
  * GitHub Plugin URI: https://github.com/sitebuilderone/wp-sitebuilderone
  * GitHub Branch: main
  * Description: ACF, LiveCanvas compatible plugin for Local Business websites
- * Version: 0.0.11
+ * Version: 0.0.12
  * Author: sitebuilderone.com
  * Author URI: https://github.com/sitebuilderone
  * License: GPL-2.0+
@@ -17,10 +17,6 @@
 if (!defined('ABSPATH')) {
     exit;
 }
-
-
-
-include_once plugin_dir_path(__FILE__) . 'includes/prefill-tasks.php';
 
 // Check and create the ACF JSON directory
 $acf_json_dir = plugin_dir_path(__FILE__) . 'acf-json';
@@ -60,43 +56,10 @@ function sbo_add_services_to_glance($items) {
     return $items;
 }
 
-add_action('admin_init', function () {
-    $tasks = get_field('sbo_website_tasks', 'options');
-    if ($tasks) {
-        error_log(print_r($tasks, true)); // Logs to debug.log
-    } else {
-        error_log('No tasks found.');
-    }
-});
 
-function sbo_display_task_widget() {
-    $tasks = get_field('sbo_website_tasks', 'options'); // Fetch tasks from options page
-
-    if ($tasks) {
-        echo '<ul>';
-        foreach ($tasks as $task) {
-            $task_name = esc_html($task['task_name']);
-            $instructions = $task['task_instructions']; // Allows HTML
-            $completed = isset($task['task_completed'][0]) && $task['task_completed'][0] === 'yes';
-
-            $checked = $completed ? 'checked' : '';
-
-            echo '<li>';
-            echo '<h4>' . $task_name . '</h4>';
-            echo '<div>' . $instructions . '</div>';
-            echo '<label>';
-            echo '<input type="checkbox" ' . $checked . '> Completed';
-            echo '</label>';
-            echo '</li>';
-        }
-        echo '</ul>';
-    } else {
-        echo '<p>No tasks found.</p>';
-    }
-}
 // Include additional files
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-instructions.php';
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-social-media.php';
 include_once plugin_dir_path(__FILE__) . 'includes/shortcodes-social.php';
 include_once plugin_dir_path(__FILE__) . 'includes/acf-conditional-shortcodes.php';
-//include_once plugin_dir_path(__FILE__) . 'includes/dashboard-widget-tasks.php';
+include_once plugin_dir_path(__FILE__) . 'includes/dashboard-widget-tasks.php';

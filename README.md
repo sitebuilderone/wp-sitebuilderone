@@ -12,17 +12,20 @@ This plugin standardizes the management of local business data & [Services](SERV
 - Schema Integration: Automatically generates structured data (schema.org) for each service page to improve search engine discoverability and compliance with modern SEO practices.
 - Dynamic Schema Output: Ensures schema data is output on each service page for search engines to crawl effectively.
 - Social media properties database (Facebook, LinkedIn, etc)
+- Checklist of tasks for website owners/editors
 - Shortcodes for integration
 
 ## Objectives
 - Streamline the process of adding and maintaining local business services with a standardized structure.
 - Enhance search engine rankings and visibility by leveraging schema and SEO elements.
 - Provide an extensible foundation for businesses to grow their digital presence using modern WordPress development practices.
+- Provide guidance in managing the website with tasks & checklists
 
 ## Technical Highlights:
 - Multiple editors can add or edit business information in WordPress
 - Built using ACF for flexible and user-friendly field management.
 - JSON sync to GitHub ensures robust version control and team collaboration.
+- JSON to manage tasks/checklists
 - Compatible with WordPress themes utilizing the Bootstrap framework, ensuring responsive and accessible design.
 
 
