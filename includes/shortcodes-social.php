@@ -16,6 +16,26 @@ use in template:
 [social_yelp_link fill="#D32323"]
 [social_github_link width="2em" fill="#333333"]
 
+All social media conditional shortcodes
+
+[social_facebook_link fill="#4267B2"] <!-- Facebook -->
+[social_linkedin_link fill="#0A66C2"] <!-- LinkedIn -->
+[social_instagram_link fill="#E4405F"] <!-- Instagram -->
+[social_google_business_link fill="#4285F4"] <!-- Google Business -->
+[social_youtube_link fill="#FF0000"] <!-- YouTube -->
+[social_twitter_x_link fill="#1DA1F2"] <!-- Twitter-X -->
+[social_pinterest_link fill="#E60023"] <!-- Pinterest -->
+[social_wordpress_link fill="#21759B"] <!-- WordPress -->
+[social_yelp_link fill="#D32323"] <!-- Yelp -->
+[social_github_link fill="#333333"] <!-- GitHub -->
+[social_bing_link fill="#008373"] <!-- Bing -->
+[social_tiktok_link fill="#010101"] <!-- TikTok -->
+[social_snapchat_link fill="#FFFC00"] <!-- Snapchat -->
+[social_reddit_link fill="#FF4500"] <!-- Reddit -->
+[social_tripadvisor_link fill="#00AF87"] <!-- TripAdvisor -->
+[social_whatsapp_link fill="#25D366"] <!-- WhatsApp -->
+[social_bbb_link fill="#00457C"] <!-- Better Business Bureau (BBB) -->
+
 */
 // If this file is called directly, abort.
 if ( !defined( 'ABSPATH' ) ) {
@@ -84,11 +104,60 @@ $social_icons = [
 </svg>',
 ],
 
-'social_twitter_link' => [
+'social_twitter_x_link' => [
 'acf_field' => 'socal-twitter-x',
 'svg' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%s" class="%s" width="%s" height="%s">
 <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"></path>
 </svg>',
+],
+
+'social_bing_link' => [
+    'acf_field' => 'social-bing',
+    'svg' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%s" class="%s" width="%s" height="%s">
+    <path d="M9.46 0v256.2c0 4.34 1.45 8.58 4.11 12.05L152.9 451.38l.16-.3L328.68 512 9.46 0zm191.9 317.2l152.88 102.3-.03.02L240.86 402 201.36 352.1zM502.5 196.4L342.57 90.38c-7.5-4.9-17.34 1.13-15.38 9.87L400.47 294.1c.36 1.1.44 2.28.22 3.42-.2 1.14-.68 2.18-1.38 3.07l-49.52 60.52 134.5-99.42c6.9-5.2 8.4-15.1 3-22.2z"></path>
+    </svg>',
+],
+
+'social_tiktok_link' => [
+    'acf_field' => 'social-tiktok',
+    'svg' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%s" class="%s" width="%s" height="%s">
+    <path d="M448 209.9c-8.19 3.62-16.9 6.07-26.02 7.13v228.6c0 41.18-33.43 74.62-74.61 74.62H74.61C33.43 520.2 0 486.7 0 445.5V74.61C0 33.43 33.43 0 74.61 0h272.8v94.72c0 50.12 40.61 90.74 90.73 90.74H448zm-247.2 43.4c-38.36 0-70.92 29.8-70.92 67.86 0 38.06 32.56 67.86 70.92 67.86 38.36 0 70.91-29.8 70.91-67.86V151.5h63.83c-2.05 47.73-44.24 85.1-92.65 85.1h-42.1v152.7c0 4.64-3.76 8.4-8.4 8.4H200.8c-4.64 0-8.4-3.76-8.4-8.4V281.1h-42.1c-48.41 0-90.6-37.37-92.65-85.1h63.83v113.8c0 4.64-3.76 8.4-8.4 8.4h-42.1c-48.41 0-90.6-37.37-92.65-85.1h63.83v113.8z"></path>
+    </svg>',
+],
+
+'social_snapchat_link' => [
+    'acf_field' => 'social-snapchat',
+    'svg' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%s" class="%s" width="%s" height="%s">
+    <path d="M314.5 320.4c-.1-.2-.2-.3-.3-.5-9.7-21.4 23.3-39 27.2-40.9 66.6-32.3 106.6-80.6 106.6-126.4 0-118.8-103.3-153.4-204.3-153.4s-204.3 34.6-204.3 153.4c0 45.8 40.1 94.2 106.6 126.4 4.3 2.1 36.4 19.6 27.2 40.9 0 0-.2.3-.3.5-21.4 33.7-46.4 62.6-57.7 82.6-7.3 12.7 12.2 25.5 22.2 25.5h221c10 0 29.5-12.8 22.2-25.5-11.3-20-36.3-48.9-57.7-82.6z"></path>
+    </svg>',
+],
+
+'social_reddit_link' => [
+    'acf_field' => 'social-reddit',
+    'svg' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%s" class="%s" width="%s" height="%s">
+    <path d="M440.2 179.9c-13.8 0-25 11.2-25 25s11.2 25 25 25 25-11.2 25-25-11.2-25-25-25zm-82.1 74.5c-33.5 0-62.9 19.3-76.2 47.2-6.7 13.8-6.5 31.3.3 44.8 13.6 28.7 48.1 43.5 85.9 36.2 5.5-1 8.3-6.6 6-11.7-9.6-21.8-35.2-37-64.4-37-13.4 0-25.9 2.6-37.3 7.2-14.1 5.9-22.4 16.4-22.4 28.6 0 13.7 10.5 25.4 25.6 27.5-20.7 4.4-44.7 3.7-68.4-3.5-33.8-10.3-60-33.4-73.1-61.7-2.4-4.9-8.4-6.6-12.8-3.4-6.3 4.8-12.5 9.6-19 14.1-1.8 1.3-2.9 3.4-3.2 5.6-.2 2.2.4 4.4 1.6 6.2 21.3 32 56.3 50.8 96.1 50.8 38.8 0 74.6-17.6 99.2-46.3 17-20.3 26.6-44.3 26.6-68.4 0-23.8-9.2-45.6-25.8-62.6-13.1-13.5-30.3-20.9-48.8-20.9zm-214.1 43c-13.8 0-25 11.2-25 25s11.2 25 25 25 25-11.2 25-25-11.2-25-25-25zm45.8-56.3c6.3-12.5 10.5-26.5 12.4-41.6l8.1-56.2 38.5 15.7c13.5 5.5 28.7 5.5 42.3 0l38.5-15.7 8.1 56.2c1.9 15.1 6.1 29.1 12.4 41.6h20.7c6.6 0 11.8 5.3 11.8 11.8v107.7c0 22-12.4 41.4-32.3 53.1l-.2.1c-7.4 4.1-17.2-.3-19.2-8.4l-17.7-66.8c-5.7-21.5-23.3-36.8-43.6-36.8h-83.8c-20.3 0-37.9 15.3-43.6 36.8l-17.7 66.8c-2 8.1-11.8 12.5-19.2 8.4l-.2-.1c-19.9-11.7-32.3-31.1-32.3-53.1V179.9c0-6.6 5.3-11.8 11.8-11.8h20.7z"></path>
+    </svg>',
+],
+
+'social_tripadvisor_link' => [
+    'acf_field' => 'social-tripadvisor',
+    'svg' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%s" class="%s" width="%s" height="%s">
+    <path d="M179.2 206.7c0 35.2-28.5 63.8-63.8 63.8-35.2 0-63.8-28.5-63.8-63.8 0-35.2 28.5-63.8 63.8-63.8s63.8 28.5 63.8 63.8zM263.7 224c0-14.8 10.9-27.6 27.6-27.6 14.8 0 27.6 10.9 27.6 27.6 0 17.1-10.9 27.6-27.6 27.6-17.1 0-27.6-10.5-27.6-27.6z"></path>
+    </svg>',
+],
+
+'social_whatsapp_link' => [
+    'acf_field' => 'social-whatsapp',
+    'svg' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%s" class="%s" width="%s" height="%s">
+    <path d="M380.9 97.3C339.8 56.2 285.6 32 224.2 32c-126.1 0-224 97.8-224 224 0 39.6 10.1 76.6 27.7 109.2L0 480l115.5-27.2C150 501.9 186 512 224.1 512c125.7 0 224-96.3 224-223.9.1-61.7-23.9-116-67.2-158.8z"></path>
+    </svg>',
+],
+
+'social_bbb_link' => [
+    'acf_field' => 'social-bbb',
+    'svg' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%s" class="%s" width="%s" height="%s">
+    <path d="M256 0c80.5 0 150.3 44.2 186.4 107.5L352 190.6H162.1L69.6 107.5C105.7 44.2 175.5 0 256 0zm0 128c-80.5 0-150.3 44.2-186.4 107.5l91.6 83.2h189.8l91.6-83.2C406.3 172.2 336.5 128 256 128zm0 224c-80.5 0-150.3 44.2-186.4 107.5l91.6 83.2H350.8L442.4 459.5C406.3 396.2 336.5 352 256 352z"></path>
+    </svg>',
 ],
 ];
 
@@ -123,11 +192,18 @@ add_shortcode('social_facebook_link', 'display_social_icon_shortcode');
 add_shortcode('social_instagram_link', 'display_social_icon_shortcode');
 add_shortcode('social_linkedin_link', 'display_social_icon_shortcode');
 add_shortcode('social_youtube_link', 'display_social_icon_shortcode');
-add_shortcode('social_twitter_link', 'display_social_icon_shortcode');
+add_shortcode('social_twitter_x_link', 'display_social_icon_shortcode');
 add_shortcode('social_google_business_link', 'display_social_icon_shortcode');
 add_shortcode('social_pinterest_link', 'display_social_icon_shortcode');
 add_shortcode('social_wordpress_link', 'display_social_icon_shortcode');
 add_shortcode('social_yelp_link', 'display_social_icon_shortcode');
 add_shortcode('social_github_link', 'display_social_icon_shortcode');
+add_shortcode('social_bing_link', 'display_social_icon_shortcode');
+add_shortcode('social_tiktok_link', 'display_social_icon_shortcode');
+add_shortcode('social_snapchat_link', 'display_social_icon_shortcode');
+add_shortcode('social_reddit_link', 'display_social_icon_shortcode');
+add_shortcode('social_tripadvisor_link', 'display_social_icon_shortcode');
+add_shortcode('social_whatsapp_link', 'display_social_icon_shortcode');
+add_shortcode('social_bbb_link', 'display_social_icon_shortcode');
 
 ?>

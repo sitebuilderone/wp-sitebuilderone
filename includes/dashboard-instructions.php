@@ -46,9 +46,13 @@ function sbo_display_instructions_widget() {
     echo '<ol>';
     echo '<li><a href="' . esc_url(admin_url('admin.php?page=business-information')) . '">Business information</a>';
     echo '<li><a href="' . esc_url(admin_url('admin.php?page=social-media')) . '">Social media accounts</a>';
-    
     echo '</ol>';
 
+    /* shortcodes */
+    echo '<h3 style="font-weight:bold;">Shortcodes</h3>';
+    echo '<p>Use <a href="' . esc_url(admin_url('admin.php?page=sbo-shortcodes')) . '">shortcodes</a> in your content to display dynamic information. For example, use <code>[sbo_business_name]</code> to display the business name.</p>';
+
+    
     echo '<h3 style="font-weight:bold;">Need help?</h3>';
     echo '<ul>';
     echo '<li>Send e-mail to <a href="mailto:' . esc_html($support_email) . '">' . esc_html($support_email) . '</a>.</li>';

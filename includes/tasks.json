@@ -6,15 +6,15 @@
         "completed": false
     },
     {
-        "id": "task_003",
-        "task": "Set Up Contact Form",
-        "instructions": "Create a contact form with name, email, and message fields.",
+        "id": "task_02",
+        "task": "Social accounts",
+        "instructions": "Update <a style='font-weight:bold;' href='admin.php?page=social-media'>social media accounts</a>",
         "completed": false
     },
     {
-        "id": "task_002",
-        "task": "Optimize Images",
-        "instructions": "Ensure all images are optimized for performance and include alt text.",
+        "id": "task_0011",
+        "task": "Set Up Contact Form",
+        "instructions": "Create a contact form with name, email, and message fields.",
         "completed": false
     }    
 ]

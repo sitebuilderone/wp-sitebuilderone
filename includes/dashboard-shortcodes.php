@@ -34,13 +34,13 @@ add_action('init', 'sbo_generate_acf_option_shortcodes_from_db');
 
 function sbo_register_admin_page() {
     add_menu_page(
-        'SBO Shortcodes',           // Page title
-        'SBO Shortcodes',           // Menu title
+        'Shortcodes',           // Page title
+        'Shortcodes',           // Menu title
         'manage_options',           // Capability
         'sbo-shortcodes',           // Menu slug
         'sbo_render_shortcodes_page', // Callback function
         'dashicons-editor-code',    // Icon (Dashicon class)
-        20                          // Position
+        4                          // Position
     );
 }
 add_action('admin_menu', 'sbo_register_admin_page');
@@ -96,6 +96,29 @@ function sbo_render_shortcodes_page() {
         echo '</table>';
     }
 
+    // List all registered shortcodes
+    echo '<h2 style="margin-top: 40px;">All Registered Shortcodes</h2>';
+    echo '<p>Below is the list of all shortcodes registered on this WordPress site:</p>';
+    echo '<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">';
+    echo '<thead>
+            <tr>
+                <th style="text-align: left; border-bottom: 1px solid #ccc; padding: 8px;">Shortcode</th>
+                <th style="text-align: left; border-bottom: 1px solid #ccc; padding: 8px;">Description</th>
+            </tr>
+          </thead>';
+    echo '<tbody>';
+
+    global $shortcode_tags;
+    foreach ($shortcode_tags as $shortcode => $callback) {
+        echo '<tr>';
+        echo '<td style="padding: 8px; width:300px;"><code>[' . esc_html($shortcode) . ']</code></td>';
+        echo '<td style="padding: 8px;">' . (is_callable($callback) ? 'Custom shortcode' : '<em>No description available</em>') . '</td>';
+        echo '</tr>';
+    }
+
+    echo '</tbody>';
+    echo '</table>';
+
     echo '</div>';
 
     // Add JavaScript for "Click to Copy"
@@ -104,11 +127,14 @@ function sbo_render_shortcodes_page() {
             button.addEventListener("click", function() {
                 const shortcode = this.getAttribute("data-shortcode");
                 navigator.clipboard.writeText(shortcode).then(() => {
-                    //alert("Shortcode copied to clipboard: " + shortcode);
+                    console.log("Shortcode copied to clipboard: " + shortcode);
                 }).catch(err => {
                     console.error("Failed to copy shortcode: ", err);
                 });
             });
         });
     </script>';
+
+
+    
 }
