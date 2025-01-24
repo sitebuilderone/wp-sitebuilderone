@@ -1,5 +1,8 @@
 <?php
 // Add Instructions Dashboard Widget
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
 add_action('wp_dashboard_setup', 'sbo_add_instructions_widget');
 
 function sbo_add_instructions_widget() {

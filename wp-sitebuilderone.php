@@ -63,3 +63,4 @@ include_once plugin_dir_path(__FILE__) . 'includes/dashboard-social-media.php';
 include_once plugin_dir_path(__FILE__) . 'includes/shortcodes-social.php';
 include_once plugin_dir_path(__FILE__) . 'includes/acf-conditional-shortcodes.php';
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-widget-tasks.php';
+include_once plugin_dir_path(__FILE__) . 'includes/dashboard-shortcodes.php';

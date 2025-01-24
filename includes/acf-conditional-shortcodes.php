@@ -1,4 +1,7 @@
 <?php
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
 // Check if ACF is active or has value
 
 // If this file is called directly, abort.

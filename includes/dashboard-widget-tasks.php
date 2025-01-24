@@ -1,6 +1,9 @@
 <?php
 // file: dashboard-widget-tasks.php
 // Add Tasks Dashboard Widget
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 function sbo_get_tasks() {
     $json_file = plugin_dir_path(__FILE__) . '/tasks.json';
