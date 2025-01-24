@@ -14,6 +14,7 @@ This plugin standardizes the management of local business data & [Services](SERV
 - Social media properties database (Facebook, LinkedIn, etc)
 - Checklist of tasks for website owners/editors
 - Shortcodes for integration
+- Conditional shortcodes for social properties
 
 ## Objectives
 - Streamline the process of adding and maintaining local business services with a standardized structure.
@@ -60,7 +61,6 @@ Features and functionality may change, and there could be unresolved bugs or iss
 - [Advanced Custom Fields (ACF) Pro](https://www.advancedcustomfields.com/) - Custom fields & options
 - [LiveCanvas](https://www.sitebuilderone.com/go/livecanvas) - Bootstrap HTML page builder for WordPress
 - [Git-updater](https://github.com/afragen/git-updater) - for retrieving from GitHub repository
-- [Shortcodes Finder](https://wordpress.org/plugins/shortcodes-finder/) - to view all available shortcodes
 
 ### Theme
 - [Picostrap](https://picostrap.com/) Bootstrap based theme + blank child theme
@@ -82,22 +82,30 @@ Features and functionality may change, and there could be unresolved bugs or iss
 # Examples: Social Media Shortcodes
 
 
-Sample .html code for footer or wherever you want to place this
+Sample .html code for footer or wherever you want to place this. 
 
-Fill colors are based on brand colors.
+These are conditional shortcodes that render SVG icon with brand colors.
 
 ```html
 <!-- shortcode example -->
  <tangible class="live-refresh">
 [social_facebook_link fill="#4267B2"] <!-- Facebook -->
-[social_wordpress_link fill="#21759B"] <!-- WordPress -->
-[social_youtube_link fill="#FF0000"] <!-- YouTube -->
+[social_linkedin_link fill="#0A66C2"] <!-- LinkedIn -->
 [social_instagram_link fill="#E4405F"] <!-- Instagram -->
-[social_twitter_link fill="#1DA1F2"] <!-- Twitter (now X) -->
-[social_google_business_link fill="#4285F4"] <!-- Google  -->
+[social_google_business_link fill="#4285F4"] <!-- Google Business -->
+[social_youtube_link fill="#FF0000"] <!-- YouTube -->
+[social_twitter_x_link fill="#1DA1F2"] <!-- Twitter-X -->
 [social_pinterest_link fill="#E60023"] <!-- Pinterest -->
+[social_wordpress_link fill="#21759B"] <!-- WordPress -->
 [social_yelp_link fill="#D32323"] <!-- Yelp -->
 [social_github_link fill="#333333"] <!-- GitHub -->
+[social_bing_link fill="#008373"] <!-- Bing -->
+[social_tiktok_link fill="#010101"] <!-- TikTok -->
+[social_snapchat_link fill="#FFFC00"] <!-- Snapchat -->
+[social_reddit_link fill="#FF4500"] <!-- Reddit -->
+[social_tripadvisor_link fill="#00AF87"] <!-- TripAdvisor -->
+[social_whatsapp_link fill="#25D366"] <!-- WhatsApp -->
+[social_bbb_link fill="#00457C"] <!-- Better Business Bureau (BBB) -->
 </tangible>
 ```
 
