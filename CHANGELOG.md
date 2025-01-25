@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.14.12] - 2025-01-25
+### Added
+- Remove default dashboard widgets
+
+
 ## [0.0.14] - 2025-01-24
 ### Added
 - Shortcodes page
