@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.14.4] - 2025-02-01
+### Added
+- Google analytics code to header (compressed output)
+- Footer codes
+
 ## [0.0.14.3] - 2025-02-01
 ### Added
 - Google embed code to business options
