@@ -45,6 +45,27 @@
             "append": ""
         },
         {
+            "key": "field_679f1474fcab3",
+            "label": "Phone (web ready)",
+            "name": "one_phone_web_ready",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter phone number in following format (without dashes) xxxXXXxxxx",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_67562e0e14867",
             "label": "Email",
             "name": "one_business_email",
@@ -104,5 +125,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1737608333
+    "modified": 1738478856
 }

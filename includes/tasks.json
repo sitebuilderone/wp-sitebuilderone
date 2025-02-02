@@ -1,20 +1,30 @@
 [
     {
         "id": "task_001",
+        "category": "Business",
         "task": "Review business details",
         "instructions": "Update <a style='font-weight:bold;' href='admin.php?page=business-information'>business information</a>",
         "completed": false
     },
     {
         "id": "task_02",
+        "category": "Business",
         "task": "Social accounts",
         "instructions": "Update <a style='font-weight:bold;' href='admin.php?page=social-media'>social media accounts</a>",
         "completed": false
     },
     {
         "id": "task_0011",
+        "category": "Website",
         "task": "Set Up Contact Form",
         "instructions": "Create a contact form with name, email, and message fields.",
         "completed": false
-    }    
+    },
+    {
+        "id": "task_0101",
+        "category": "Connect",
+        "task": "Google Analytics",
+        "instructions": "Connect <a href='https://analytics.google.com/analytics/web/' target='_blank'>Google Analytics</a> to your website.",
+        "completed": false
+    }
 ]

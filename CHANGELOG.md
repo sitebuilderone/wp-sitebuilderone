@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.0.14.12] - 2025-01-25
+## [0.0.14.3] - 2025-02-01
+### Added
+- Google embed code to business options
+- Web ready phone number format (xxxXXXxxxx)
+
+### Changed
+- Tasks with with categories and show/hide checklist
+
+## [0.0.14.2] - 2025-01-25
 ### Added
 - Remove default dashboard widgets
 

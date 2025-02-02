@@ -113,7 +113,7 @@
             "name": "one_google_map_url",
             "aria-label": "",
             "type": "url",
-            "instructions": "URL to business <a href=\"https:\/\/www.google.com\/\">Google Map<\/a> listing",
+            "instructions": "URL to business <a href=\"https:\/\/www.google.com\/maps\/\" target=\"_blank\">Google Map<\/a> listing",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -124,6 +124,27 @@
             "default_value": "",
             "allow_in_bindings": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_679f1332243f7",
+            "label": "Google Map Embed Code",
+            "name": "one_google_map_embed",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy and paste the embed code here",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -144,5 +165,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737478529
+    "modified": 1738478794
 }
