@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.14.5] - 2025-02-02
+### Added
+- Business info (ACF) import & export
+
 ## [0.0.14.4] - 2025-02-01
 ### Added
 - Google analytics code to header (compressed output)
@@ -15,10 +19,11 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Tasks with with categories and show/hide checklist
 
-## [0.0.14.2] - 2025-01-25
+
+## [0.0.14.12] - 2025-01-25
 ### Added
 - Remove default dashboard widgets
-
+- Check for ACF plugin
 
 ## [0.0.14] - 2025-01-24
 ### Added

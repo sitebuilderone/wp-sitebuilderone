@@ -52,6 +52,10 @@ function sbo_display_instructions_widget() {
     echo '<h3 style="font-weight:bold;">Shortcodes</h3>';
     echo '<p>Use <a href="' . esc_url(admin_url('admin.php?page=sbo-shortcodes')) . '">shortcodes</a> in your content to display dynamic information. For example, use <code>[sbo_business_name]</code> to display the business name.</p>';
 
+    /* import export */
+    echo '<h3 style="font-weight:bold;">Import/export</h3>';
+    echo '<p>Use <a href="' . esc_url(admin_url('options-general.php?page=sbo-acf-import-export')) . '">Import/Export Business Data</a></p>';
+
     
     echo '<h3 style="font-weight:bold;">Need help?</h3>';
     echo '<ul>';
