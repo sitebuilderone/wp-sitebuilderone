@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.14.6] - 2025-02-03
+### Added
+- Marketing options
+- Fix for image URLs 
+- blocks import xml file
+
 ## [0.0.14.5] - 2025-02-02
 ### Added
 - Business info (ACF) import & export

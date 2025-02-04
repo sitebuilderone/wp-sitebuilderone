@@ -32,3 +32,4 @@ function conditional_acf_shortcode($atts, $content = null)
     return "";
 }
 add_shortcode("acf_conditional", "conditional_acf_shortcode");
+

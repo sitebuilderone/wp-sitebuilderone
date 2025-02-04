@@ -5,7 +5,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 function sbo_generate_acf_option_shortcodes_from_db() {
-    // Get all field groups
+    global $shortcode_tags;
     $field_groups = acf_get_field_groups();
 
     if (!$field_groups) {
@@ -14,23 +14,41 @@ function sbo_generate_acf_option_shortcodes_from_db() {
     }
 
     foreach ($field_groups as $group) {
-        // Get all fields in the group
         $fields = acf_get_fields($group['key']);
         if (!$fields) {
             continue;
         }
 
         foreach ($fields as $field) {
-            // Generate a shortcode for each field
             $shortcode_name = 'sbo_' . sanitize_title($field['name']);
-            add_shortcode($shortcode_name, function() use ($field) {
-                $value = get_field($field['name'], 'option'); // Fetch value from ACF options
-                return $value ?: '<em>No value set for ' . esc_html($field['label']) . '</em>';
-            });
+            if (isset($shortcode_tags[$shortcode_name])) {
+                continue;
+            }
+            
+            if ($field['type'] === 'image') {
+                add_shortcode($shortcode_name, function() use ($field) {
+                    $image_url = get_field($field['name'], 'option');
+                    if ($image_url) {
+                        // Strip the domain completely for src attributes
+                        $url_parts = parse_url($image_url);
+                        return esc_url($url_parts['path']);
+                    }
+                    return '';
+                });
+            } else {
+                // Standard handling for non-image fields
+                add_shortcode($shortcode_name, function() use ($field) {
+                    $value = get_field($field['name'], 'option');
+                    return $value ?: '<em>No value set for ' . esc_html($field['label']) . '</em>';
+                });
+            }
         }
     }
 }
+
 add_action('init', 'sbo_generate_acf_option_shortcodes_from_db');
+
+
 
 function sbo_register_admin_page() {
     add_menu_page(
@@ -138,3 +156,4 @@ function sbo_render_shortcodes_page() {
 
     
 }
+
