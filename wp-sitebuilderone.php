@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: SiteBuilderOne Local Business
+ * Plugin Name: All-in-One Local Business Website
  * Plugin URI: https://github.com/sitebuilderone/wp-sitebuilderone
  * GitHub Plugin URI: https://github.com/sitebuilderone/wp-sitebuilderone
  * GitHub Branch: main
  * Description: ACF, LiveCanvas compatible plugin for Local Business websites
- * Version: 0.0.14.6
+ * Version: 0.0.14.7
  * Author: sitebuilderone.com
  * Author URI: https://github.com/sitebuilderone
  * License: GPL-2.0+
@@ -100,14 +100,18 @@ function sbo_add_services_to_glance($items) {
     return $items;
 }
 
+
+
 // Include additional files
 include_once plugin_dir_path(__FILE__) . 'includes/header-footer-codes.php';
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-guide.php';
+include_once plugin_dir_path(__FILE__) . 'includes/dashboard-admin-menu.php';
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-social-media.php';
 include_once plugin_dir_path(__FILE__) . 'includes/shortcodes-social.php';
 include_once plugin_dir_path(__FILE__) . 'includes/acf-conditional-shortcodes.php';
 include_once plugin_dir_path(__FILE__) . 'includes/acf-import-export.php';
-include_once plugin_dir_path(__FILE__) . 'includes/dashboard-widget-tasks.php';
+include_once plugin_dir_path(__FILE__) . 'includes/admin-page-tasks.php';
+include_once plugin_dir_path(__FILE__) . 'includes/admin-page-performance.php';
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-shortcodes.php';
 
 // remove default dashboard widgets from wordpress

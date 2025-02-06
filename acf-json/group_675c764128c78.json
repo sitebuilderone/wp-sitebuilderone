@@ -3,6 +3,48 @@
     "title": "Integrations",
     "fields": [
         {
+            "key": "field_679f1b5ceaef6",
+            "label": "Header Code",
+            "name": "one_header_code",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Place any extra header scripts of code here. Can include verification codes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_679f1c1a3512a",
+            "label": "Footer Code",
+            "name": "one_footer_code",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Code for footer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_675c76410b714",
             "label": "Google Analytics",
             "name": "one_g-google_analytics",
@@ -78,6 +120,27 @@
             "new_lines": ""
         },
         {
+            "key": "field_67a42e3b30925",
+            "label": "Looker Studio",
+            "name": "one_looker_studio",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "What is the embed code for reporting for <a href=\"https:\/\/lookerstudio.google.com\/navigation\/reporting\">Google Looker Studio<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_678fc66353916",
             "label": "Bing Webmaster",
             "name": "one_bing_webmaster",
@@ -115,48 +178,6 @@
             "rows": "",
             "placeholder": "",
             "new_lines": ""
-        },
-        {
-            "key": "field_679f1b5ceaef6",
-            "label": "Header Code",
-            "name": "one_header_code",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "Place any extra header scripts of code here. Can include verification codes",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_679f1c1a3512a",
-            "label": "Footer Code",
-            "name": "one_footer_code",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "Code for footer",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
         }
     ],
     "location": [
@@ -177,5 +198,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738480696
+    "modified": 1738813061
 }

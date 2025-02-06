@@ -4,7 +4,6 @@ if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
 add_action('wp_dashboard_setup', 'sbo_add_social_media_widget');
-
 function sbo_add_social_media_widget() {
     wp_add_dashboard_widget(
         'sbo_social_media_widget', // Widget slug
@@ -12,7 +11,6 @@ function sbo_add_social_media_widget() {
         'sbo_display_social_media_widget' // Display callback
     );
 }
-
 function sbo_display_social_media_widget() {
     // Define all social media fields with labels
     $social_media_fields = [
@@ -34,11 +32,9 @@ function sbo_display_social_media_widget() {
         'social-whatsapp' => 'WhatsApp',
         'social-bbb' => 'Better Business Bureau (BBB)',
     ];
-
     // Initialize arrays for set and missing fields
     $set_fields = [];
     $missing_fields = [];
-
     // Check each field's value
     foreach ($social_media_fields as $key => $label) {
         $value = get_field($key, 'options');
@@ -67,7 +63,6 @@ function sbo_display_social_media_widget() {
         '[social_whatsapp_link fill="#25D366"]' => 'WhatsApp', // Official Green
         '[social_bbb_link fill="#00457C"]' => 'Better Business Bureau (BBB)', // Official Blue
     ];
-
    /* $social_shortcodes = [
         '[social_facebook_link fill="#4267B2"]' => 'Facebook',
         '[social_wordpress_link fill="#21759B"]' => 'WordPress',
@@ -83,17 +78,12 @@ function sbo_display_social_media_widget() {
     foreach ($social_shortcodes as $shortcode => $name) {
         echo '<div style="margin-right:5px; display:inline-block;">' . do_shortcode($shortcode) . '</div>';
     }
-
-    
     // Display the widget content
     echo '<div>';
- 
-
 // Display fields with values
 if (!empty($set_fields)) {
     // Sort the set fields alphabetically by label
     ksort($set_fields);
-
     echo '<ol>';
     foreach ($set_fields as $label => $value) {
         echo '<li><strong>' . esc_html($label) . ':</strong> <a href="' . esc_url($value) . '" target="_blank">' . esc_html($value) . '</a></li>';
@@ -106,7 +96,6 @@ if (!empty($set_fields)) {
 if (!empty($missing_fields)) {
     // Sort the missing fields alphabetically
     sort($missing_fields);
-
     echo '<h4>Missing social accounts:</h4><ul>';
     foreach ($missing_fields as $label) {
         echo '<li>' . esc_html($label) . '</li>';
@@ -119,9 +108,7 @@ if (!empty($missing_fields)) {
 echo '<div style="text-align: center; margin-top: 20px;">';
 echo '<a href="' . esc_url(admin_url('admin.php?page=social-media')) . '" class="button button-primary">Edit Social Media Accounts</a>';
 echo '</div>';
-
 // social media short codes
-
 // Output the shortcodes in a code block
 echo '<hr style="margin-top:20px;"><h3 style="margin-top:10px;">Shortcodes for content or layouts</h3>';
 echo '<pre><code style="font-size: 12px; line-height: 2;">';
@@ -143,14 +130,5 @@ echo esc_html('[social_tripadvisor_link fill="#00AF87"]') . "\n";
 echo esc_html('[social_whatsapp_link fill="#25D366"]') . "\n";
 echo esc_html('[social_bbb_link fill="#00457C"]') . "\n";
 echo '</code></pre>';
-
-
-
-
-
-
-
-
-
         echo '</div>';
     }

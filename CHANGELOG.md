@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.14.7] - 2025-02-05
+### Added
+- Marketing options
+- Google Looker Studio embed in admin
+- Performance reporting (todo)
+
+### Changed
+- Plugin name
+
 ## [0.0.14.6] - 2025-02-03
 ### Added
 - Marketing options

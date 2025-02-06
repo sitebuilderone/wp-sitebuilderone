@@ -65,7 +65,9 @@ function sbo_dashboard_widget_scripts($hook) {
 
 // Add AJAX refresh handler
 add_action('wp_ajax_sbo_refresh_widget', 'sbo_refresh_widget_content');
+
 function sbo_refresh_widget_content() {
+    
     check_ajax_referer('sbo_refresh_widget', 'nonce');
     
     // Log for debugging
@@ -76,20 +78,33 @@ function sbo_refresh_widget_content() {
 }
 
 function sbo_add_instructions_widget() {
+
+    // Start fresh output buffer - only clear if there's buffering active
+    if (ob_get_level()) {
+        ob_end_clean(); // Use ob_end_clean() to properly close the buffer
+    }
+    ob_start();
     wp_add_dashboard_widget(
         'sbo_instructions_widget',
         'Local business guide',
         'sbo_display_instructions_widget',
         'sbo_dashboard_widget_control'
     );
+    // At the end, get and echo the buffer contents
+    $output = ob_get_clean();
+    echo $output;
 }
 
 // Add widget control for refresh button
+
 function sbo_dashboard_widget_control() {
     echo '<div class="sbo-widget-controls" style="padding: 12px; border-bottom: 1px solid #e5e5e5;">';
     echo '<button type="button" class="button button-primary sbo-refresh-widget">Refresh Information</button>';
     echo '<span class="spinner" style="float: none; margin: 0 0 0 4px;"></span>';
     echo '</div>';
+    
+    // Return any saved settings
+    return array();
 }
 
 function sbo_display_instructions_widget() {
@@ -107,7 +122,11 @@ function sbo_display_instructions_widget() {
     wp_cache_delete('alloptions', 'options');
     
     // Fetch data with cache busting
-    $support_email = get_field('one_support_email', 'options', true);
+    if (function_exists('get_field')) {
+        $support_email = get_field('one_support_email', 'options', true);
+    } else {
+        $support_email = 'support@example.com';
+    }
     if (!$support_email) {
         $support_email = 'support@example.com';
     }
@@ -150,12 +169,20 @@ function sbo_display_instructions_widget() {
     }
     echo '</ul>';
 
-    // Services Count
-    echo '<p>Published Services: <a href="' . esc_url(admin_url('edit.php?post_type=services')) . '">' . 
-         esc_html($published_count) . ' ' . _n('Service', 'Services', $published_count, 'text-domain') . '</a></p>';
+    echo '<h2 style="font-weight:bold;">Services</h2>';
+// Services Count
+echo '<p>Published Services: <a href="' . esc_url(admin_url('edit.php?post_type=services')) . '">' . 
+esc_html($published_count) . ' ' . _n('Service', 'Services', $published_count, 'text-domain') . '</a></p>';
+
+echo '<div style="text-align: center; margin: 10px 0px 20px 0px;">';
+echo '<a href="' . esc_url(admin_url('edit.php?post_type=services')) . '" class="button button-primary">' .
+esc_html($published_count) . ' ' . _n('Service', 'Services', $published_count, 'text-domain') . '</a></p>';
+echo '</div>';         
+
+         
 
     // Missing Information Section
-    echo '<h3 style="font-weight:bold; color: #d63638;">Missing Information</h3>';
+    echo '<h2 style="font-weight:bold; color: #d63638;">Missing Information</h2>';
     echo '<ul class="sbo-missing-info" style="color: #d63638;">';
     
     // Check Business Fields
@@ -183,11 +210,20 @@ function sbo_display_instructions_widget() {
     echo '</ul>';
 
     // Standard sections remain the same
-    echo '<h3 style="font-weight:bold;">Shortcodes</h3>';
+    echo '<h2 style="font-weight:bold;">Shortcodes</h2>';
     echo '<p>Use <a href="' . esc_url(admin_url('admin.php?page=sbo-shortcodes')) . '">shortcodes</a> in your content to display dynamic information. For example, use <code>[sbo_business_name]</code> to display the business name.</p>';
 
-    echo '<h3 style="font-weight:bold;">Import/Export</h3>';
-    echo '<p>Use <a href="' . esc_url(admin_url('options-general.php?page=sbo-acf-import-export')) . '">Import/Export Business Data</a></p>';
+echo '<div style="text-align: center; margin: 10px 0px 20px 0px;">';
+echo '<a href="' . esc_url(admin_url('admin.php?page=sbo-shortcodes')) . '" class="button button-primary">View Shortcodes</a>';
+echo '</div>';
+
+
+    echo '<h2 style="font-weight:bold;">Import/Export</h2>';
+    echo '<p>Use <a href="' . esc_url(admin_url('options-general.php?page=sbo-acf-import-export')) . '">Import/Export</a> for your business data</p>';
+
+    echo '<div style="text-align: center; margin: 10px 0px 20px 0px;">';
+echo '<a href="' . esc_url(admin_url('options-general.php?page=sbo-acf-import-export')) . '" class="button button-primary">Import/Export Data</a>';
+echo '</div>';
 
     echo '<h3 style="font-weight:bold;">Need help?</h3>';
     echo '<ul>';
