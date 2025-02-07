@@ -29,7 +29,7 @@ function sbo_group_tasks_by_category($tasks) {
 add_action('admin_menu', 'sbo_add_checklist_page');
 function sbo_add_checklist_page() {
     add_menu_page(
-        'Site Checklist', // Page title
+        'Website Tasks & Checklist', // Page title
         'Checklist', // Menu title
         'manage_options', // Capability required
         'sbo-checklist', // Menu slug

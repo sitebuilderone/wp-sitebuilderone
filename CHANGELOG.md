@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.14.9] - 2025-02-07
+### Added
+- Search console links
+
+
 ## [0.0.14.8] - 2025-02-06
 ### Added
 - Google Looker Studio embed in admin

@@ -81,6 +81,24 @@
             "placeholder": ""
         },
         {
+            "key": "field_67a6193be886a",
+            "label": "Google Search Console Insights",
+            "name": "one_google_search_console_insights",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Link to Search Console performance report",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
             "key": "field_678fc62bb786c",
             "label": "Google Tag Manager",
             "name": "one_g-google_tag_manager",
@@ -198,5 +216,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738813061
+    "modified": 1738938734
 }

@@ -6,8 +6,9 @@ This plugin standardizes the management of local business data & [Services](SERV
 
 ## Key Features
 
-- Business Information Management: Allows businesses to input and update essential details such as name, address, and contact information.
-- Custom Post Type for [Services](SERVICES.md): Each business can define its unique set of services within a dedicated custom post type.
+- **Business Information Management**: Allows businesses to input and update essential details such as name, address, and contact information.
+- **Services:** Custom Post Type for [Services](SERVICES.md): Each business can define its unique set of services within a dedicated custom post type.
+- **Marketing:** Call to action, testimonials, Google reviews
 - SEO Optimization: Every service includes fields for SEO elements (title, meta descriptions, keywords) to enhance visibility.
 - Schema Integration: Automatically generates structured data (schema.org) for each service page to improve search engine discoverability and compliance with modern SEO practices.
 - Dynamic Schema Output: Ensures schema data is output on each service page for search engines to crawl effectively.

@@ -10,8 +10,8 @@ add_action('admin_bar_menu', 'add_business_info_link', 999);
 function add_business_info_link($wp_admin_bar) {
 
     $tasks_args = array(
-        'id'    => 'Quick Start',
-        'title' => 'Quick Start',
+        'id'    => 'Checklist',
+        'title' => 'Checklist',
         'href'  => admin_url('admin.php?page=sbo-checklist'),
         'meta'  => array(
             'class' => 'setup-info-toolbar'

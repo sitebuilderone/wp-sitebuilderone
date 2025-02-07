@@ -8,7 +8,7 @@ add_action('admin_menu', 'sbo_add_insights_page');
 
 function sbo_add_insights_page() {
     add_menu_page(
-        'Performance',
+        'Performance Reports',
         'Performance',
         'manage_options',
         'site-performance',
@@ -19,6 +19,7 @@ function sbo_add_insights_page() {
 }
 
 function sbo_render_insights_page() {
+
     echo '<div class="wrap">';
     echo '<h1>' . get_admin_page_title() . '</h1>';
     
@@ -31,11 +32,47 @@ $domain = parse_url(get_site_url(), PHP_URL_HOST);
 // Create the Google search URL
 $google_search_url = 'https://www.google.ca/search?q=site%3A' . urlencode($domain);
 
+
 echo '<div class="left-column">';
 echo '<div class="postbox" style="margin-top: 10px; padding: 15px;">';
-echo '<h2>Test Your Website</h2>';
+echo '<h2>Google</h2>';
 echo '<ul class="nav-list">';
+
+// Analytics
+$ga4_link = get_field('one_g-google_analytics', 'option'); // Added 'option' parameter   
+if ($ga4_link) {
+    echo '<li><a href="' . $ga4_link . '" target="_blank">Google Analytics</a></li>';
+} else {
+    echo '<li style="color: red;"><a style="color: red;" href="' . esc_url(admin_url('admin.php?page=integrations')) . '" target="_blank">Add Analytics</a></li>';
+}
+// Search Console
+$g_sc = get_field('one_g-google_search_console', 'option');
+if ($g_sc) {
+    echo '<li><a href="' . $g_sc . '" target="_blank">Google Search Console</a></li>';
+} else {
+    echo '<li style="color: red;"><a style="color: red;" href="' . esc_url(admin_url('admin.php?page=integrations')) . '" target="_blank">Add Search Console</a></li>';
+}
+
+// Search Console Insights
+$g_sc_i = get_field('one_google_search_console_insights', 'option');
+if ($g_sc_i) {
+    echo '<li><a href="' . $g_sc_i . '" target="_blank">Google Search Console Report</a></li>';
+} else {
+    echo '<li style="color: red;"><a style="color: red;" href="' . esc_url(admin_url('admin.php?page=integrations')) . '" target="_blank">Add Search Console Report</a></li>';
+}
+
+// Bing
+$bing_webmaster = get_field('one_bing_webmaster', 'option');
+if ($g_sc_i) {
+    echo '<li><a href="' . $bing_webmaster . '" target="_blank">Bing Webmaster</a></li>';
+} else {
+    echo '<li style="color: red;"><a style="color: red;" href="' . esc_url(admin_url('admin.php?page=integrations')) . '" target="_blank">Add Bing Webmaster</a></li>';
+}
+
+
+// Google Site Search
 echo '<li><a href="' . esc_url($google_search_url) . '" target="_blank">Google Site Search</a> - View number of pages indexed in Google</li>';
+
 echo '</ul>';
 
 echo '<h2>Tools</h2>';
