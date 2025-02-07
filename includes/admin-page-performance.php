@@ -2,67 +2,80 @@
 if (!defined('ABSPATH')) {
     exit;
 }
+
 // Add the admin menu page
 add_action('admin_menu', 'sbo_add_insights_page');
 
 function sbo_add_insights_page() {
     add_menu_page(
-        'Performance', // Page title
-        'Performance', // Menu title
-        'manage_options', // Capability required
-        'site-performance', // Menu slug
-        'sbo_render_insights_page', // Callback function
-        'dashicons-chart-area', // Icon (chart icon)
-        3 // Position in menu (high priority)
+        'Performance',
+        'Performance',
+        'manage_options',
+        'site-performance',
+        'sbo_render_insights_page',
+        'dashicons-chart-area',
+        3
     );
 }
 
 function sbo_render_insights_page() {
-    // Page wrapper
     echo '<div class="wrap">';
     echo '<h1>' . get_admin_page_title() . '</h1>';
-    // Analytics Overview Section
-    echo '<div id="analytics" class="tab-content">';
+    
+    // Create the two-column layout wrapper
+    echo '<div class="two-column-wrapper">';
+    
+    // Left Column (20%)
+// Get the current domain name
+$domain = parse_url(get_site_url(), PHP_URL_HOST);
+// Create the Google search URL
+$google_search_url = 'https://www.google.ca/search?q=site%3A' . urlencode($domain);
+
+echo '<div class="left-column">';
+echo '<div class="postbox" style="margin-top: 10px; padding: 15px;">';
+echo '<h2>Test Your Website</h2>';
+echo '<ul class="nav-list">';
+echo '<li><a href="' . esc_url($google_search_url) . '" target="_blank">Google Site Search</a> - View number of pages indexed in Google</li>';
+echo '</ul>';
+echo '</div>';
+echo '</div>';
+    
+    // Right Column (80%) - Looker Studio
+    echo '<div class="right-column">';
     echo '<div class="postbox" style="margin-top: 10px; padding: 0px;">';
-    // Placeholder for Google Analytics integration
-    echo '<div id="ga-chart" style="background: #f8f9fa; padding: 20px; margin-top: 10px;">';
     
-    //echo '<iframe width="1200" height="800" src="https://lookerstudio.google.com/embed/reporting/ee6113ab-bd07-47f6-97ee-d391300ccc3b/page/a01gD" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>';
-
-    echo '<div class="responsive-iframe-container" style="position: relative; padding-bottom: 66.67%; /* 800/1200 = 66.67% */ height: 0; overflow: hidden; width: 100%; max-width: 100%;">
-    <iframe 
-        src="https://lookerstudio.google.com/embed/reporting/ee6113ab-bd07-47f6-97ee-d391300ccc3b/page/a01gD" 
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-        frameborder="0" 
-        allowfullscreen 
-        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-    </iframe>
-</div>';
-
-    echo '</div>';
-    echo '</div>';
-    echo '</div>';
-
-    // Add other metric sections...
+    // Get the Looker Studio embed code from ACF
+    $looker_embed = get_field('one_looker_studio', 'option'); // Added 'option' parameter
     
+    echo '<div id="ga-chart" style="background: #f8f9fa; padding: 0px; margin-top: 0px;">';
+    echo '<div class="responsive-iframe-container">';
+    
+    if ($looker_embed) {
+        echo $looker_embed;
+    } else {
+        echo '<p style="color: red;">No Looker Studio report configured.</p>';
+    }
+    
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    
+    echo '</div>'; // Close two-column-wrapper
     echo '</div>'; // Close wrap
 
     // Add JavaScript for tab handling
     ?>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Tab handling code here
         const tabs = document.querySelectorAll('.nav-tab');
         const contents = document.querySelectorAll('.tab-content');
 
         tabs.forEach(tab => {
             tab.addEventListener('click', (e) => {
                 e.preventDefault();
-                // Handle tab switching
                 tabs.forEach(t => t.classList.remove('nav-tab-active'));
                 tab.classList.add('nav-tab-active');
-                // Show corresponding content
-                // Additional tab logic here
             });
         });
     });
@@ -70,11 +83,47 @@ function sbo_render_insights_page() {
     <?php
 }
 
-
-add_action('wp_head', 'add_responsive_iframe_styles');
-function add_responsive_iframe_styles() {
+// Add styles to admin head for this page only
+add_action('admin_head', 'add_admin_styles');
+function add_admin_styles() {
+    // Only add these styles on our specific admin page
+    $screen = get_current_screen();
+    if ($screen->base !== 'toplevel_page_site-performance') {
+        return;
+    }
     ?>
     <style>
+        .two-column-wrapper {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .left-column {
+            flex: 0 0 30%;
+            min-width: 200px;
+        }
+        
+        .right-column {
+            flex: 0 0 70%;
+        }
+        
+        .nav-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .nav-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        
+        .nav-list li:last-child {
+            border-bottom: none;
+        }
+        
         .responsive-iframe-container {
             position: relative;
             padding-bottom: 66.67%;
@@ -83,6 +132,7 @@ function add_responsive_iframe_styles() {
             width: 100%;
             max-width: 100%;
         }
+        
         .responsive-iframe-container iframe {
             position: absolute;
             top: 0;
@@ -90,7 +140,12 @@ function add_responsive_iframe_styles() {
             width: 100%;
             height: 100%;
         }
+        
+        .postbox {
+            background: white;
+            border: 1px solid #ccd0d4;
+            box-shadow: 0 1px 1px rgba(0,0,0,.04);
+        }
     </style>
     <?php
 }
-

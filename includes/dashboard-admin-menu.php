@@ -8,6 +8,17 @@ if (!defined('ABSPATH')) {
 add_action('admin_bar_menu', 'add_business_info_link', 999);
 
 function add_business_info_link($wp_admin_bar) {
+
+    $tasks_args = array(
+        'id'    => 'Quick Start',
+        'title' => 'Quick Start',
+        'href'  => admin_url('admin.php?page=sbo-checklist'),
+        'meta'  => array(
+            'class' => 'setup-info-toolbar'
+        )
+    );
+    $wp_admin_bar->add_node($tasks_args);
+
     $args = array(
         'id'    => 'business-info',
         'title' => 'Business',
@@ -32,6 +43,17 @@ function add_business_info_link($wp_admin_bar) {
         );
         $wp_admin_bar->add_node($services_args);
 
+
+    $performance_args = array(
+        'id'    => 'performance-info',
+        'title' => 'Performance',
+        'href'  => admin_url('admin.php?page=site-performance'),
+        'meta'  => array(
+            'class' => 'performance-info-toolbar'
+        )
+    );
+    $wp_admin_bar->add_node($performance_args);
+    
     $shortcode_args = array(
         'id'    => 'shortcode-info',
         'title' => 'Shortcodes',

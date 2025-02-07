@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.14.8] - 2025-02-06
+### Added
+- Google Looker Studio embed in admin
+
 ## [0.0.14.7] - 2025-02-05
 ### Added
 - Marketing options

@@ -26,5 +26,12 @@
         "task": "Google Analytics",
         "instructions": "Connect <a href='https://analytics.google.com/analytics/web/' target='_blank'>Google Analytics</a> to your website.",
         "completed": false
+    },
+    {
+        "id": "task_0201",
+        "category": "Developer",
+        "task": "Looker Studio",
+        "instructions": "Copy report and get embed code <a href='https://lookerstudio.google.com/u/0/reporting/78c05189-5d66-4a65-a1da-ef10e891b31e/page/a01gD' target='_blank'>Looker Studio</a>",
+        "completed": false
     }
 ]
