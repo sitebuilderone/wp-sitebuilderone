@@ -1,0 +1,176 @@
+{
+    "key": "group_business_schema",
+    "title": "Business Schema Details",
+    "fields": [
+        {
+            "key": "field_one_price_range",
+            "label": "Price Range",
+            "name": "one_price_range",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The relative price range of your business (e.g., '$', '$$', '$$$', '$$$$')",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": 99,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_one_latitude",
+            "label": "Latitude",
+            "name": "one_latitude",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Business latitude (minimum 5 decimal places)",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_one_longitude",
+            "label": "Longitude",
+            "name": "one_longitude",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Business longitude (minimum 5 decimal places)",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_one_opening_hours",
+            "label": "Opening Hours",
+            "name": "one_opening_hours",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Set your business hours",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "button_label": "Add Row",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_one_opening_hours_days",
+                    "label": "Days",
+                    "name": "days",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Monday": "Monday",
+                        "Tuesday": "Tuesday",
+                        "Wednesday": "Wednesday",
+                        "Thursday": "Thursday",
+                        "Friday": "Friday",
+                        "Saturday": "Saturday",
+                        "Sunday": "Sunday"
+                    },
+                    "allow_custom": 0,
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "default_value": [],
+                    "save_custom": 0,
+                    "return_format": "value",
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_one_opening_hours"
+                },
+                {
+                    "key": "field_one_opening_hours_opens",
+                    "label": "Opens",
+                    "name": "opens",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "H:i",
+                    "parent_repeater": "field_one_opening_hours"
+                },
+                {
+                    "key": "field_one_opening_hours_closes",
+                    "label": "Closes",
+                    "name": "closes",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "H:i",
+                    "parent_repeater": "field_one_opening_hours"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "business-information"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Additional fields for LocalBusiness schema",
+    "show_in_rest": 0,
+    "modified": 1738942354
+}

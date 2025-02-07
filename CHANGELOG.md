@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.15] - 2025-02-07
+### Added
+- Local business schema
+### Changed
+- Renamed group names
+
 ## [0.0.14.9] - 2025-02-07
 ### Added
 - Search console links

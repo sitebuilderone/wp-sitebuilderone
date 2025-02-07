@@ -90,3 +90,8 @@ add_action('wp_head', 'add_header_codes', 1);
 
 // Add footer code with priority 20 to ensure it loads after other scripts
 add_action('wp_footer', 'add_footer_code', 20);
+
+
+
+// https://developers.google.com/search/docs/appearance/structured-data/local-business
+// JSON local business structured data output to header here

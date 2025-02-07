@@ -5,7 +5,7 @@
  * GitHub Plugin URI: https://github.com/sitebuilderone/wp-sitebuilderone
  * GitHub Branch: main
  * Description: ACF, LiveCanvas compatible plugin for Local Business websites
- * Version: 0.0.14.9
+ * Version: 0.0.15
  * Author: sitebuilderone.com
  * Author URI: https://github.com/sitebuilderone
  * License: GPL-2.0+
@@ -113,6 +113,7 @@ include_once plugin_dir_path(__FILE__) . 'includes/acf-import-export.php';
 include_once plugin_dir_path(__FILE__) . 'includes/admin-page-tasks.php';
 include_once plugin_dir_path(__FILE__) . 'includes/admin-page-performance.php';
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-shortcodes.php';
+include_once plugin_dir_path(__FILE__) . 'includes/local-business-schema.php';
 
 // remove default dashboard widgets from wordpress
 function remove_dashboard_widgets() {
