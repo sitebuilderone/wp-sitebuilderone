@@ -37,6 +37,13 @@ echo '<h2>Test Your Website</h2>';
 echo '<ul class="nav-list">';
 echo '<li><a href="' . esc_url($google_search_url) . '" target="_blank">Google Site Search</a> - View number of pages indexed in Google</li>';
 echo '</ul>';
+
+echo '<h2>Tools</h2>';
+echo '<ul class="nav-list">';
+echo '<li><a href="https://gtmetrix.com/" target="_blank">GT Metrix</a> website speed test</li>';
+echo '<li><a href="https://web.archive.org/" target="_blank">Internet Archive</a></li>';
+echo '</ul>';
+
 echo '</div>';
 echo '</div>';
     

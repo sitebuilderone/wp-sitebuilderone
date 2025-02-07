@@ -1,0 +1,43 @@
+{
+    "key": "group_67a59989dfff9",
+    "title": "Reviews",
+    "fields": [
+        {
+            "key": "field_67a5998ac363f",
+            "label": "Google Review Link",
+            "name": "one_google_review_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Link to your Google business page - where people submit a review. <a target=\"_blank\" href=\"https:\/\/support.google.com\/business\/answer\/3474122?hl=en&visit_id=638745028998661776-2953837062&p=search_more_reviews&rd=1#best_practice\">More info ...<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "marketing"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1738906180
+}
