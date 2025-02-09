@@ -80,7 +80,9 @@ Features and functionality may change, and there could be unresolved bugs or iss
 ![Git updater settings](https://raw.githubusercontent.com/sitebuilderone/wp-sitebuilderone/refs/heads/main/assets/images/gitupdater.png)
 
 
-# Examples: Social Media Shortcodes
+# Examples: 
+
+## Social Media Shortcodes
 
 
 Sample .html code for footer or wherever you want to place this. 

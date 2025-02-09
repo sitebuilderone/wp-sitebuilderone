@@ -1,6 +1,6 @@
 <?php
 // generates shortcodes for ACF options page fields
-if ( !defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
@@ -24,22 +24,51 @@ function sbo_generate_acf_option_shortcodes_from_db() {
             if (isset($shortcode_tags[$shortcode_name])) {
                 continue;
             }
-            
-            if ($field['type'] === 'image') {
+
+            if ($field['type'] === 'repeater') {
+                // Handle repeater fields
                 add_shortcode($shortcode_name, function() use ($field) {
-                    $image_url = get_field($field['name'], 'option');
-                    if ($image_url) {
-                        // Strip the domain completely for src attributes
-                        $url_parts = parse_url($image_url);
-                        return esc_url($url_parts['path']);
+                    $repeater_data = get_field($field['name'], 'option');
+                    if (!empty($repeater_data) && is_array($repeater_data)) {
+                        $output = '<div class="' . esc_attr($field['name']) . '-wrapper">';
+                        foreach ($repeater_data as $row) {
+                            $output .= '<div class="' . esc_attr($field['name']) . '-item">';
+                            foreach ($row as $key => $value) {
+                                // Skip empty values and ensure we're only outputting strings
+                                if (!empty($value) && is_string($value)) {
+                                    $output .= '<div class="' . esc_attr($key) . '">' . esc_html($value) . '</div>';
+                                } elseif (!empty($value) && is_array($value)) {
+                                    // Handle nested arrays (like image arrays) by getting the URL
+                                    if (isset($value['url'])) {
+                                        $output .= '<div class="' . esc_attr($key) . '">' . esc_url($value['url']) . '</div>';
+                                    }
+                                }
+                            }
+                            $output .= '</div>';
+                        }
+                        $output .= '</div>';
+                        return $output;
                     }
                     return '';
                 });
             } else {
-                // Standard handling for non-image fields
+                // Handle non-repeater fields
                 add_shortcode($shortcode_name, function() use ($field) {
                     $value = get_field($field['name'], 'option');
-                    return $value ?: '<em>No value set for ' . esc_html($field['label']) . '</em>';
+                    
+                    // Handle different types of values
+                    if (is_array($value)) {
+                        if (isset($value['url'])) {
+                            // Handle image fields
+                            return esc_url($value['url']);
+                        }
+                        // For other arrays, return empty to avoid errors
+                        return '';
+                    } elseif (is_string($value)) {
+                        return wp_kses_post($value);
+                    }
+                    
+                    return '';
                 });
             }
         }
@@ -48,17 +77,46 @@ function sbo_generate_acf_option_shortcodes_from_db() {
 
 add_action('init', 'sbo_generate_acf_option_shortcodes_from_db');
 
+// Add custom testimonial shortcode
+function sbo_add_custom_testimonial_shortcode() {
+    add_shortcode('sbo_testimonials', function() {
+        $testimonials = get_field('one_testimonials', 'option');
+        if (!$testimonials || !is_array($testimonials)) {
+            return '';
+        }
 
+        $output = '<div class="testimonials-wrapper">';
+        foreach ($testimonials as $testimonial) {
+            $output .= '<div class="testimonial-item">';
+            if (!empty($testimonial['one_testimonial_name'])) {
+                $output .= '<h3 class="testimonial-name">' . esc_html($testimonial['one_testimonial_name']) . '</h3>';
+            }
+            if (!empty($testimonial['one_testimonial_company'])) {
+                $output .= '<div class="testimonial-company">' . esc_html($testimonial['one_testimonial_company']) . '</div>';
+            }
+            if (!empty($testimonial['one_testimonial_review'])) {
+                $output .= '<div class="testimonial-review">' . wp_kses_post($testimonial['one_testimonial_review']) . '</div>';
+            }
+            if (!empty($testimonial['one_testimonial_image'])) {
+                $output .= '<div class="testimonial-image"><img src="' . esc_url($testimonial['one_testimonial_image']) . '" alt="Testimonial"></div>';
+            }
+            $output .= '</div>';
+        }
+        $output .= '</div>';
+        return $output;
+    });
+}
+add_action('init', 'sbo_add_custom_testimonial_shortcode');
 
 function sbo_register_admin_page() {
     add_menu_page(
         'Shortcodes',           // Page title
         'Shortcodes',           // Menu title
-        'manage_options',           // Capability
-        'sbo-shortcodes',           // Menu slug
+        'manage_options',       // Capability
+        'sbo-shortcodes',       // Menu slug
         'sbo_render_shortcodes_page', // Callback function
         'dashicons-editor-code',    // Icon (Dashicon class)
-        4                          // Position
+        4                      // Position
     );
 }
 add_action('admin_menu', 'sbo_register_admin_page');
@@ -96,8 +154,23 @@ function sbo_render_shortcodes_page() {
         } else {
             foreach ($fields as $field) {
                 $shortcode_name = 'sbo_' . sanitize_title($field['name']);
-                $value = get_field($field['name'], 'option'); // Fetch value from ACF options
-                $value_display = $value ?: '<em>-</em>';
+                $value = get_field($field['name'], 'option');
+                
+                // Handle value display
+                $value_display = '';
+                if (is_string($value)) {
+                    $value_display = wp_kses_post($value);
+                } elseif (is_array($value)) {
+                    if ($field['type'] === 'repeater') {
+                        $value_display = '<em>' . count($value) . ' items</em>';
+                    } elseif (isset($value['url'])) {
+                        $value_display = esc_url($value['url']);
+                    } else {
+                        $value_display = '<em>Complex field</em>';
+                    }
+                } else {
+                    $value_display = '<em>-</em>';
+                }
 
                 echo '<tr>';
                 echo '<td style="padding: 8px; width:200px;">' . esc_html($field['label']) . '</td>';
@@ -105,7 +178,7 @@ function sbo_render_shortcodes_page() {
                         <button class="sbo-copy-btn" data-shortcode="[' . esc_attr($shortcode_name) . ']">Copy</button>
                       </td>';
                 echo '<td style="padding: 8px;width:300px;"><code>[' . esc_html($shortcode_name) . ']</code></td>';
-                echo '<td style="padding: 8px;">' . wp_kses_post($value_display) . '</td>';
+                echo '<td style="padding: 8px;">' . $value_display . '</td>';
                 echo '</tr>';
             }
         }
@@ -140,20 +213,49 @@ function sbo_render_shortcodes_page() {
     echo '</div>';
 
     // Add JavaScript for "Click to Copy"
-    echo '<script>
+    ?>
+    <script>
         document.querySelectorAll(".sbo-copy-btn").forEach(button => {
             button.addEventListener("click", function() {
                 const shortcode = this.getAttribute("data-shortcode");
-                navigator.clipboard.writeText(shortcode).then(() => {
-                    console.log("Shortcode copied to clipboard: " + shortcode);
-                }).catch(err => {
-                    console.error("Failed to copy shortcode: ", err);
-                });
+                navigator.clipboard.writeText(shortcode)
+                    .then(() => {
+                        // Store the original text
+                        const originalText = this.textContent;
+                        // Change button text to indicate success
+                        this.textContent = "Copied!";
+                        // Reset button text after 2 seconds
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error("Failed to copy shortcode: ", err);
+                        // Indicate failure
+                        this.textContent = "Failed!";
+                        setTimeout(() => {
+                            this.textContent = "Copy";
+                        }, 2000);
+                    });
             });
         });
-    </script>';
-
-
-    
+    </script>
+    <style>
+        .sbo-copy-btn {
+            padding: 4px 8px;
+            background-color: #2271b1;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .sbo-copy-btn:hover {
+            background-color: #135e96;
+        }
+        .sbo-copy-btn:active {
+            background-color: #0a4b78;
+        }
+    </style>
+    <?php
 }
-
