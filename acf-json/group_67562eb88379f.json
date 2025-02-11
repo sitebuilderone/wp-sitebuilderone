@@ -130,7 +130,7 @@
             "label": "Google Map Embed Code",
             "name": "one_google_map_embed",
             "aria-label": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "Copy and paste the embed code here",
             "required": 0,
             "conditional_logic": 0,
@@ -142,9 +142,9 @@
             "default_value": "",
             "maxlength": "",
             "allow_in_bindings": 1,
-            "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -165,5 +165,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738478794
+    "modified": 1739252839
 }

@@ -29,6 +29,16 @@ function add_business_info_link($wp_admin_bar) {
     );
     $wp_admin_bar->add_node($args);
 
+    $args_marketing = array(
+        'id'    => 'marketing-info',
+        'title' => 'Marketing',
+        'href'  => admin_url('admin.php?page=marketing'),
+        'meta'  => array(
+            'class' => 'marketing-info-toolbar'
+        )
+    );
+    $wp_admin_bar->add_node($args_marketing);
+
         // Services Link with Count
         $services_count = wp_count_posts('services');
         $published_count = $services_count->publish;

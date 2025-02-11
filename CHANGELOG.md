@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.16] - 2025-02-10
+### Added
+- Google embed fixed
+- Marketing in top navigation
+
 ## [0.0.15] - 2025-02-07
 ### Added
 - Local business schema

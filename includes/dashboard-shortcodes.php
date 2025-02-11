@@ -259,3 +259,11 @@ function sbo_render_shortcodes_page() {
     </style>
     <?php
 }
+
+add_shortcode('sbo_one_google_map_embed', function() {
+    $embed_code = get_field('one_google_map_embed', 'option');
+    if ($embed_code) {
+        return $embed_code; // Ensure the raw iframe HTML is returned
+    }
+    return 'Google Map Embed not set.';
+});
