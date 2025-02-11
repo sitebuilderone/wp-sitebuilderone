@@ -100,8 +100,6 @@ function sbo_add_services_to_glance($items) {
     return $items;
 }
 
-
-
 // Include additional files
 include_once plugin_dir_path(__FILE__) . 'includes/header-footer-codes.php';
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-guide.php';
