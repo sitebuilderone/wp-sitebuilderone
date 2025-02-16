@@ -7,6 +7,13 @@
         "completed": false
     },
     {
+        "id": "task_0015",
+        "category": "Business",
+        "task": "Add Frequently Asked Questions",
+        "instructions": "Enter FAQ's about your business <a style='font-weight:bold;' href='edit.php?post_type=faqs'>FAQ's</a>",
+        "completed": false
+    },
+    {
         "id": "task_02",
         "category": "Business",
         "task": "Social accounts",

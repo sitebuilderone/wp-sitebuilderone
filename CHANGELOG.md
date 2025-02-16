@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.17] - 2025-02-15
+### Added
+- Frequently Asked Questions (FAQ)
+
 ## [0.0.16] - 2025-02-10
 ### Added
 - Google embed fixed

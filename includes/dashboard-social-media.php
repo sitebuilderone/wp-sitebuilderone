@@ -96,11 +96,11 @@ if (!empty($set_fields)) {
 if (!empty($missing_fields)) {
     // Sort the missing fields alphabetically
     sort($missing_fields);
-    echo '<h4>Missing social accounts:</h4><ul>';
+    echo '<h4>Missing social accounts:</h4><p>';
     foreach ($missing_fields as $label) {
-        echo '<li>' . esc_html($label) . '</li>';
+        echo '' . esc_html($label) . ', ';
     }
-    echo '</ul>';
+    echo '</p>';
 } else {
     echo '<p><strong>All social media properties are set.</strong></p>';
 }

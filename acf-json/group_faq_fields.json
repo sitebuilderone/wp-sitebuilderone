@@ -1,0 +1,103 @@
+{
+    "key": "group_faq_fields",
+    "title": "FAQ Details",
+    "fields": [
+        {
+            "key": "field_faq_question",
+            "label": "Question",
+            "name": "faq_question",
+            "type": "text",
+            "instructions": "The frequently asked question",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_faq_answer",
+            "label": "Answer",
+            "name": "faq_answer",
+            "type": "wysiwyg",
+            "instructions": "The answer to the FAQ question",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_faq_category",
+            "label": "FAQ Category",
+            "name": "faq_category",
+            "type": "taxonomy",
+            "instructions": "Select or add categories for this FAQ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_faq_order",
+            "label": "Display Order",
+            "name": "faq_order",
+            "type": "number",
+            "instructions": "Set the order in which this FAQ should appear (lower numbers appear first)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 10,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "faqs"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1
+}

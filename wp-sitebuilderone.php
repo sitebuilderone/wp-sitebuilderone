@@ -5,7 +5,7 @@
  * GitHub Plugin URI: https://github.com/sitebuilderone/wp-sitebuilderone
  * GitHub Branch: main
  * Description: ACF, LiveCanvas compatible plugin for Local Business websites
- * Version: 0.0.16
+ * Version: 0.0.17
  * Author: sitebuilderone.com
  * Author URI: https://github.com/sitebuilderone
  * License: GPL-2.0+
@@ -83,20 +83,36 @@ $acf_json_dir = plugin_dir_path(__FILE__) . 'acf-json';
 if (!file_exists($acf_json_dir)) {
     mkdir($acf_json_dir, 0755, true);
 }
+
 // Extend 'At a Glance' widget
-add_action('dashboard_glance_items', 'sbo_add_services_to_glance');
-function sbo_add_services_to_glance($items) {
-    $services_count = wp_count_posts('services'); // Replace 'services' with your custom post type slug
-    $published_count = $services_count->publish;
-    if ($published_count > 0) {
-        $text = _n('Service', 'Services', $published_count, 'text-domain');
+add_action('dashboard_glance_items', 'sbo_add_custom_post_types_to_glance');
+function sbo_add_custom_post_types_to_glance($items) {
+    // Add Services count
+    $services_count = wp_count_posts('services');
+    $services_published = $services_count->publish;
+    if ($services_published > 0) {
+        $services_text = _n('Service', 'Services', $services_published, 'text-domain');
         $items[] = sprintf(
             '<a href="%s">%s %s</a>',
             esc_url(admin_url('edit.php?post_type=services')),
-            number_format_i18n($published_count),
-            esc_html($text)
+            number_format_i18n($services_published),
+            esc_html($services_text)
         );
     }
+
+    // Add FAQs count
+    $faqs_count = wp_count_posts('faqs');
+    $faqs_published = $faqs_count->publish;
+    if ($faqs_published > 0) {
+        $faqs_text = _n('FAQ', 'FAQs', $faqs_published, 'text-domain');
+        $items[] = sprintf(
+            '<a href="%s">%s %s</a>',
+            esc_url(admin_url('edit.php?post_type=faqs')),
+            number_format_i18n($faqs_published),
+            esc_html($faqs_text)
+        );
+    }
+
     return $items;
 }
 
