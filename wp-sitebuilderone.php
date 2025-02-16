@@ -129,6 +129,17 @@ include_once plugin_dir_path(__FILE__) . 'includes/admin-page-performance.php';
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-shortcodes.php';
 include_once plugin_dir_path(__FILE__) . 'includes/local-business-schema.php';
 
+// Include the plugin checker class
+require_once plugin_dir_path(__FILE__) . 'includes/plugin-checker.php';
+
+// Initialize the plugin checker on plugins_loaded action
+add_action('plugins_loaded', 'initialize_local_business_plugin_checker');
+
+function initialize_local_business_plugin_checker() {
+    // Create new instance of the checker
+    new LocalBusiness_Plugin_Checker();
+}
+
 // remove default dashboard widgets from wordpress
 function remove_dashboard_widgets() {
     global $wp_meta_boxes;

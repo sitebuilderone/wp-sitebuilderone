@@ -1,0 +1,30 @@
+{
+    "required": {
+        "advanced-custom-fields-pro": {
+            "name": "Advanced Custom Fields PRO",
+            "slug": "advanced-custom-fields-pro",
+            "required": true,
+            "version": "5.0.0"
+        },
+        "admin-site-enhancements": {
+            "name": "Admin Site Enhancements",
+            "slug": "admin-site-enhancements",
+            "required": true,
+            "version": "7.6.10"
+        },
+        "wp-sitemap-page": {
+            "name": "WP sitemap page",
+            "slug": "wp-sitemap-page",
+            "required": true,
+            "version": "1.9.4"
+        }
+    },
+    "recommended": {
+        "wordpress-seo": {
+            "name": "Yoast SEO",
+            "slug": "wordpress-seo",
+            "required": false,
+            "version": "20.0"
+        }
+    }
+}
