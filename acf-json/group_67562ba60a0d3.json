@@ -1,0 +1,349 @@
+{
+    "key": "group_67562ba60a0d3",
+    "title": "Social Media",
+    "fields": [
+        {
+            "key": "field_675a7cb961b9f",
+            "label": "Facebook",
+            "name": "social-facebook",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Essential for most businesses",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675a7d6e51d23",
+            "label": "LinkedIn",
+            "name": "social-linkedin",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Ideal for professional networking and B2B businesses",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675a7cdd61ba0",
+            "label": "Instagram",
+            "name": "social-instagram",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Great for visually driven content and B2C marketing",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675a7e73dbdec",
+            "label": "Google Business",
+            "name": "social-google_business",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Critical for local SEO and appearing in Google Maps",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675a7db91a403",
+            "label": "YouTube",
+            "name": "social-youtube",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Excellent for video marketing, tutorials, and branding",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675a7d37b09db",
+            "label": "Twitter-X",
+            "name": "socal-twitter-x",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Useful for real-time updates and broader audience reach",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67d70bfae1316",
+            "label": "Bluesky",
+            "name": "social-bluesky",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675a7d951ee70",
+            "label": "Pinterest",
+            "name": "social-pinterest",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Perfect for industries with visually appealing content like retail, fashion, or crafts",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675a7f4e97d3c",
+            "label": "WordPress",
+            "name": "social-wordpress",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "For managing blog content or showcasing long-form articles",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675c758a27fcd",
+            "label": "Yelp",
+            "name": "social-yelp",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Important for service and hospitality businesses to gain customer reviews",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675c75ec96177",
+            "label": "GitHub",
+            "name": "social-github",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Relevant for technology and development-focused businesses",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_678fc9ba5b06f",
+            "label": "Bing",
+            "name": "social-bing",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Useful for businesses listed in Bing Places to reach a wider audience",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_678fca19c6c24",
+            "label": "TikTok",
+            "name": "social-tiktok",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Growing platform for short-form video content and engaging younger demographics",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_678fca38c6c25",
+            "label": "Snapchat",
+            "name": "social-snapchat",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Ideal for localized promotions and younger audiences",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_678fca47c6c26",
+            "label": "Reddit",
+            "name": "social-reddit",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Good for niche businesses or those with active engagement in specific communities.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_678fca66c6c27",
+            "label": "TripAdvisor",
+            "name": "social-tripadvisor",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Important for travel, hospitality, and dining businesses",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_678fca91c6c28",
+            "label": "WhatsApp",
+            "name": "social-whatsapp",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Customer communication and engagement",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_678fcb202618f",
+            "label": "Better Business Bureau (BBB)",
+            "name": "social-bbb",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Adds credibility for businesses focused on trust and transparency",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "social-media"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1742146600
+}
