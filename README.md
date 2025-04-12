@@ -82,6 +82,17 @@ Features and functionality may change, and there could be unresolved bugs or iss
 
 # Examples: 
 
+## Why Choose Us
+
+```
+[why_choose_us limit="6"]
+
+by category:
+[why_choose_us category="seo"]
+
+```
+
+
 ## Social Media Shortcodes
 
 
@@ -125,6 +136,12 @@ Sample html output
 
 
 ## Changelog
+
+## [0.0.18] - 2025-04-12
+### Added
+- Why choose us ACF
+- Disable Gutenberg
+
 
 For details on changes in this project, see the [Changelog](CHANGELOG.md).
 

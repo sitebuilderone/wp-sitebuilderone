@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.18] - 2025-04-12
+### Added
+- Why choose us ACF
+- Disable Gutenberg
+
 ## [0.0.17.1] - 2025-02-15
 ### Added
 - Required plugin checker

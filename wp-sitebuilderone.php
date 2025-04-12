@@ -5,7 +5,7 @@
  * GitHub Plugin URI: https://github.com/sitebuilderone/wp-sitebuilderone
  * GitHub Branch: main
  * Description: ACF, LiveCanvas compatible plugin for Local Business websites
- * Version: 0.0.17
+ * Version: 0.0.18
  * Author: sitebuilderone.com
  * Author URI: https://github.com/sitebuilderone
  * License: GPL-2.0+
@@ -128,6 +128,7 @@ include_once plugin_dir_path(__FILE__) . 'includes/admin-page-tasks.php';
 include_once plugin_dir_path(__FILE__) . 'includes/admin-page-performance.php';
 include_once plugin_dir_path(__FILE__) . 'includes/dashboard-shortcodes.php';
 include_once plugin_dir_path(__FILE__) . 'includes/local-business-schema.php';
+include_once plugin_dir_path(__FILE__) . 'includes/why-choose-us.php';
 
 // Include the plugin checker class
 require_once plugin_dir_path(__FILE__) . 'includes/plugin-checker.php';
@@ -140,6 +141,7 @@ function initialize_local_business_plugin_checker() {
     new LocalBusiness_Plugin_Checker();
 }
 
+// Maintenance
 // remove default dashboard widgets from wordpress
 function remove_dashboard_widgets() {
     global $wp_meta_boxes;
@@ -154,3 +156,58 @@ function remove_dashboard_widgets() {
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+
+// disables gutenberg editor for all post types
+add_filter('use_block_editor_for_post_type', '__return_false');
+// Disable block editor CSS
+function sb1_remove_block_css(){
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+}
+add_action('wp_enqueue_scripts', 'sb1_remove_block_css', 100);
+
+
+
+
+function display_homepage_features() {
+    if (!function_exists('get_field')) {
+        return '<p>ACF plugin is required.</p>';
+    }
+
+    $features = get_field('homepage_features');
+    if (!$features) {
+        return '<p>No features available.</p>';
+    }
+
+    ob_start(); ?>
+
+    <div id="archiveHomePosts" class="d-grid gap-3 mw-8 mx-auto">
+        <?php foreach ($features as $feature) : ?>
+            <div class="col-12 py-5 border-top">
+                <div class="row align-items-center">
+                    <div class="col-lg mb-3 mb-lg-0">
+                        <?php if (!empty($feature['image'])) : ?>
+                            <img loading="lazy" src="<?php echo esc_url($feature['image']); ?>" class="img-fluid" alt="Feature Image">
+                        <?php else : ?>
+                            <img loading="lazy" src="https://placehold.co/150" class="img-fluid" alt="Placeholder">
+                        <?php endif; ?>
+                    </div>
+                    <div class="col-lg-9 mb-3 mb-lg-0">
+                        <div class="mw-4">
+                            <h3 class="fw-bold">
+                                <?php echo esc_html($feature['feature']); ?>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('homepage_features', 'display_homepage_features');
+
+
+
