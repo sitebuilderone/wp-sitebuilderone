@@ -30,6 +30,7 @@ function sb1_register_why_choose_us_cpt() {
 add_action('init', 'sb1_register_why_choose_us_cpt');
 
 // Optional: Register Taxonomy for Category Filter
+/*
 function sb1_register_why_choose_us_taxonomy() {
     register_taxonomy(
         'category',
@@ -43,6 +44,7 @@ function sb1_register_why_choose_us_taxonomy() {
     );
 }
 add_action('init', 'sb1_register_why_choose_us_taxonomy');
+*/
 
 // Shortcode Display
 function sb1_display_why_choose_us( $atts ) {

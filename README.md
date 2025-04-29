@@ -1,4 +1,4 @@
-# Local business website (beta)
+# Local business website (beta 0.19)
 
 All-in-One plugin for local business websites that are WordPress powered, using [Bootstrap](https://getbootstrap.com/) with the [LiveCanvas](https://www.sitebuilderone.com/go/livecanvas) plugin and [Picostrap](https://picostrap.com/) theme.
 
@@ -136,6 +136,12 @@ Sample html output
 
 
 ## Changelog
+
+
+## [0.0.19] - 2025-04-29
+### FIX
+- Category was disabled on Post types, fixed.
+
 
 ## [0.0.18] - 2025-04-12
 ### Added
